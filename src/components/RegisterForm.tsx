@@ -9,7 +9,7 @@ const RegisterForm = () => {
                        type="text" 
                        id="firstName" 
                        name="firstName" 
-                       className="border p-2 rounded-md w-full bg-orange-300/30 focus:outline-orange-300 text-white placeholder-white" 
+                       className=" p-2 rounded-md w-full bg-orange-300/30 focus:outline-orange-300 text-white placeholder-white" 
                        placeholder="First Name" 
                    />
                </div>
@@ -18,7 +18,7 @@ const RegisterForm = () => {
                        type="text" 
                        id="lastName" 
                        name="lastName" 
-                       className="border p-2 rounded-md w-full focus:outline-orange-300 bg-orange-300/30 text-white placeholder-white" 
+                       className="p-2 rounded-md w-full focus:outline-orange-300 bg-orange-300/30 text-white placeholder-white" 
                        placeholder="Last Name" 
                    />
                </div>
@@ -28,7 +28,7 @@ const RegisterForm = () => {
                     type="text" 
                     id="email"
                     name="email"
-                    className="border p-2 rounded-md w-full focus:outline-orange-300 bg-orange-300/30 text-white placeholder-white"
+                    className="p-2 rounded-md w-full focus:outline-orange-300 bg-orange-300/30 text-white placeholder-white"
                     placeholder="Email"
                 />
             </div> 
@@ -37,14 +37,14 @@ const RegisterForm = () => {
                 type="password" 
                 name="password"
                 id="password"
-                className="border p-2 rounded-md w-full focus:outline-orange-300 bg-orange-300/30 text-white placeholder-white" 
+                className=" p-2 rounded-md w-full focus:outline-orange-300 bg-orange-300/30 text-white placeholder-white" 
                 placeholder="Password"/>
             </div>
 
             <div className="w-full mt-4">
                 <button
                     type="submit"
-                    className="text-base font-semibold p-2 rounded-md w-full mt-4 text-white bg-orange-300/50"
+                    className="text-base font-semibold p-2 rounded-md w-full mt-4 text-white bg-orange-600/55 border border-white"
                 >
                     Create Account
                 </button>
@@ -58,7 +58,7 @@ const RegisterForm = () => {
             <div className="w-full mt-4 flex space-x-4">
                 <button
                     type="submit"
-                    className="border p-2 rounded-md w-full mt-4 text-white flex items-center justify-center bg-orange-300/30">
+                    className="p-2 rounded-md w-full mt-4 text-white flex items-center justify-center bg-orange-300/30">
                     <svg role="img" viewBox="0 0 24 24" width={25} className="mr-2" xmlns="http://www.w3.org/2000/svg">
                       <title>Google</title>
                       <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" fill="#ffffff"/>
@@ -67,7 +67,7 @@ const RegisterForm = () => {
                 </button>
                 <button
                     type="submit"
-                    className="border p-2 rounded-md w-full mt-4 flex items-center justify-center text-white bg-orange-300/30"
+                    className="p-2 rounded-md w-full mt-4 flex items-center justify-center text-white bg-orange-300/30"
                 >
                  <svg role="img" width={25} className="mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                    <title>Facebook</title>
