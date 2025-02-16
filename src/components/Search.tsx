@@ -19,9 +19,9 @@ const Search = () => {
 
 
   return (
-    <div className="max-w-2xl bg-gradient-to-l to-[#FFF] from-[#FFE6DD] rounded-2xl mt-5">
+    <div className="max-w-5xl bg-gradient-to-l to-[#FFF] from-[#FFE6DD] rounded-2xl mt-5">
       {/* Search title */}
-      <div className="ml-14 pt-4 pb-3 space-y-1">
+      <div className=" pt-4 pb-3 space-y-1 px-4">
         <h3 className="text-3xl font-semibold">Search hotels</h3>
         <p className="text-base font-medium">Enjoy hassle-free bookings with Cleartrip</p>
       </div>
