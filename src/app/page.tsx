@@ -1,26 +1,15 @@
-import Search from "@/components/Search";
+import Search from "@/components/hotels_Component/Search";
 import SidePar from "@/components/SidePar";
-import Slider from "@/components/Slider";
+import Slider from "@/components/shared/Slider";
 import Link from "next/link";
-import img from "@/images/sliderimg.webp";
-import img2 from "@/images/RR_RBLEMI_H_1106.webp";
-import img3 from "@/images/RR_YESEMI_H_0711.webp";
-import img4 from "@/images/RR_idfc_H_1106_1.webp";
-import img5 from "@/images/RR_kotak_H__11zon.webp";
+
+import ExclusiveBenefits from "@/components/hotels_Component/ExclusiveBenefits.";
+import { images, offers } from "@/data/data";
 
 
-const offers = [
-  { title: "Domestic hotel offer!", description: "Get upto 30% off on hotils", offerCode: "Use coupon code : CTHOTEL", url: "#" },
-  { title: "International hotel offers", description: "Get upto 30% off on hotils", offerCode: "Use coupon code : CTHOTEL", url: "#" },
-];
+
 export default function Home() {
-  const images: string[] = [
-      img.src,
-      img2.src,
-      img3.src,
-      img4.src,
-      img5.src
-    ];
+
   return (
     <div className="max-w-7xl mx-auto flex pt-7 gap-6">
       {/*  side par */}
@@ -31,8 +20,9 @@ export default function Home() {
       {/*  search and offer slider*/}
       <main className="flex-1">
         <div className="flex gap-6">
-          <div className="flex-[2.5]">
+          <div className="flex-[2.5] space-y-10">
             <Search />
+            <ExclusiveBenefits/>
           </div>
           <div className="flex-[1] space-y-7">
             <Slider content={images} type="image"/>
@@ -45,7 +35,7 @@ export default function Home() {
         </div>
         <div className="mt-6">
           {/* main content */}
-          
+          <p>lorem100</p>
         </div>
       </main>
     </div>

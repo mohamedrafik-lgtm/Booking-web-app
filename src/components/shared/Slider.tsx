@@ -20,7 +20,7 @@ interface IProp {
 const Slider = ({ content, type }: IProp) => {
 
 
-    
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -47,7 +47,7 @@ const Slider = ({ content, type }: IProp) => {
 
     if (type === "offer" && typeof item === "object") {
       return (
-        <div className="p-9 bg-orange-500 shadow-lg rounded-lg text-center w-full cursor-pointer">
+        <div className="p-4 pb-32 bg-orange-500 shadow-lg space-y-3 rounded-lg text-center w-full cursor-pointer">
           <h2 className="text-xl font-bold mt-2 text-white">{item.title}</h2>
           <p className="text-white">{item.description}</p>
           <span className="text-white font-semibold">{item.offerCode}</span>
