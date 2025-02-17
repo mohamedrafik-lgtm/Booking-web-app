@@ -5,6 +5,8 @@ import Link from "next/link";
 
 import ExclusiveBenefits from "@/components/hotels_Component/ExclusiveBenefits.";
 import { images, offers } from "@/data/data";
+import BankOffers from "@/components/hotels_Component/BankOffers";
+import PopularDestination from "@/components/hotels_Component/PopularDestination";
 
 
 
@@ -13,7 +15,7 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto flex pt-7 gap-6">
       {/*  side par */}
-      <aside className="w-56 sticky top-20 self-start">
+      <aside className="w-56">
         <SidePar />
       </aside>
       
@@ -33,9 +35,14 @@ export default function Home() {
               <Slider content={offers}  type="offer"/>
           </div>
         </div>
-        <div className="mt-6">
+        <div className="mt-14 space-y-9">
           {/* main content */}
-          <p>lorem100</p>
+          <div>
+               <BankOffers/>
+          </div>
+          <div>
+            <PopularDestination/>
+          </div>
         </div>
       </main>
     </div>
