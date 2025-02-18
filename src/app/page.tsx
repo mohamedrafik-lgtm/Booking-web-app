@@ -7,6 +7,7 @@ import ExclusiveBenefits from "@/components/hotels_Component/ExclusiveBenefits."
 import { images, offers } from "@/data/data";
 import BankOffers from "@/components/hotels_Component/BankOffers";
 import PopularDestination from "@/components/hotels_Component/PopularDestination";
+import TopHotelsWithGreatDeals from "@/components/hotels_Component/TopHotelsWithGreatDeals";
 
 
 
@@ -42,6 +43,9 @@ export default function Home() {
           </div>
           <div>
             <PopularDestination/>
+          </div>
+          <div>
+            <TopHotelsWithGreatDeals/>
           </div>
         </div>
       </main>

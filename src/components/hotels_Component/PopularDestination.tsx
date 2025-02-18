@@ -55,7 +55,7 @@ const PopularDestination = () =>{
                     height: '235px',
                     width:"184px"
                   }}>
-                        <h3 className="text-white font-medium text-2xl">luxury</h3>
+                        <h3 className="text-white font-medium text-2xl">Luxor</h3>
                         <p className="text-white  text-basel">8032 property</p> 
                  </div>
 
