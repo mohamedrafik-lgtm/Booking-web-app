@@ -3,7 +3,8 @@ import img2 from "@/images/popular destinations/087c746aafb2886926e36fc7adf85342
 import img3 from "@/images/popular destinations/647bd05e0c34a3def360e8125d56e96b.jpg";
 import img4 from "@/images/popular destinations/89162a95810e0854b6217cdd594d3d31.jpg";
 import img5 from "@/images/popular destinations/d1492fcbf2819b38a6a233aeb1e5bd5f.jpg";
-const PopularDestination = () =>{
+const 
+PopularDestination = () =>{
 
     return(
         <div className="space-y-8 mb-11">
