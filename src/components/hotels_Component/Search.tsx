@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Search = () => {
-  const [location, setLocation] = useState("");
+  const [searchHotels, setSearchHotels] = useState("");
   const [isFocused, setIsFocused] = useState(false);
 
   const [durationOfStay, setDurationOfStay] = useState({
@@ -39,10 +39,10 @@ const Search = () => {
             required
             placeholder="Enter location"
             className="w-full rounded-md py-4 focus:outline-none"
-            value={location}
+            value={searchHotels}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
-            onChange={(e) => setLocation(e.target.value)}
+            onChange={(e) => setSearchHotels(e.target.value)}
           />
         </div>
 
@@ -50,7 +50,7 @@ const Search = () => {
 
         {/* Check-in & Check-out */}
         <div className="flex justify-between space-x-4">
-          <div className="flex flex-1 rounded-md border p-2 w-fit space-x-2">
+          <div className="flex flex-1 rounded-md justify-between border p-2 w-fit space-x-2">
             
             <input
               type="date"
@@ -58,7 +58,7 @@ const Search = () => {
               value={durationOfStay.checkIn}
               onChange={(e) => setDurationOfStay({ ...durationOfStay, checkIn: e.target.value })}
             />
-            
+            <div className="w-0.5 h-full bg-black opacity-50"></div>
             <input
               type="date"
               className="text-lg w-32 focus:outline-none appearance-none"
@@ -90,7 +90,7 @@ const Search = () => {
 
         {/* Search Button */}
         <div className="flex justify-end">
-          <Link className="text-base font-bold bg-[#ff4f17] text-white px-14 py-3 rounded-lg" href={`/${location}`}>
+          <Link className="text-base font-bold bg-[#ff4f17] text-white px-14 py-3 rounded-lg" href={`/${searchHotels}`}>
             Search hotels
           </Link>
         </div>

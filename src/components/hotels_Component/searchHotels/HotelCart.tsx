@@ -7,7 +7,7 @@ const HotelCart = () => {
     const [hover,setHover] = useState(false);
     console.log(hover)
     return (
-        <div className="w-fit mt-7 space-y-3">
+        <div className="w-fit space-y-3">
           <div className="relative" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
             <Image src={img.src} alt={"hotels"} width={1000} height={1000} className="w-80 h-60 rounded-lg object-cover relative"/>
              {hover ?

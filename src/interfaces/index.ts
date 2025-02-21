@@ -4,3 +4,7 @@ export interface IOfferSlider{
     offerCode:string,
     url:string
 }
+export interface ISortInput{
+    id:string,
+    label:string
+}
