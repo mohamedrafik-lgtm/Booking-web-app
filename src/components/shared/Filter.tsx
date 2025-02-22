@@ -2,37 +2,15 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { dealsInput, sortInput } from "@/data/data";
+import { dealsInput, sortInput, starCategory,guestRatings, propertyType } from "@/data/data";
+import RenderInput from "../RenderInput";
 
 const Filter = () => {
-  const [openSections, setOpenSections] = useState({ sort: false, deals: false });
+  const [openSections, setOpenSections] = useState({ PopularFilters: false, deals: false , StarCategory: false , GuestRatings: false ,PropertyType:false});
 
-  const toggleSection = (section: 'sort' | 'deals') => {
+  const toggleSection = (section: 'PopularFilters' | 'deals' | 'StarCategory'| 'GuestRatings' | 'PropertyType') => {
     setOpenSections((prev) => ({ ...prev, [section]: !prev[section] }));
   };
-
-  const renderSortInput = sortInput.map(({ id, label }) => (
-    <div key={id} className="flex items-center space-x-2">
-      <input type="radio" name="sort" id={id} className="peer hidden" />
-      <label
-        htmlFor={id}
-        className="w-6 h-6 border peer-checked:border-4 border-gray-400 rounded-full flex items-center justify-center cursor-pointer peer-checked:border-black peer-checked:bg-transparent"
-      ></label>
-      <span className="text-lg">{label}</span>
-    </div>
-  ));
-
-  const renderDealsInput = dealsInput.map(({ id, label }) => (
-    <div key={id} className="flex items-center space-x-2">
-      <input type="checkbox" name="deals" id={id} className="peer hidden" />
-      <label
-        htmlFor={id}
-        className="w-6 h-6 border peer-checked:border-4 border-gray-400 rounded-md flex items-center justify-center cursor-pointer peer-checked:border-black peer-checked:bg-transparent"
-      ></label>
-      <span className="text-lg">{label}</span>
-    </div>
-  ));
-
   return (
     <aside className="w-56 px-3 py-5 space-y-5">
       <h3 className="text-2xl font-semibold text-orange-500">Filter</h3>
@@ -40,9 +18,9 @@ const Filter = () => {
         <div>
           <div
             className="flex items-center space-x-2 cursor-pointer"
-            onClick={() => toggleSection("sort")}
+            onClick={() => toggleSection("PopularFilters")}
           >
-            <p className="text-lg font-semibold">Sort hotels by</p>
+            <p className="text-lg font-semibold">Popular filters</p>
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -50,7 +28,7 @@ const Filter = () => {
               strokeWidth="1.5"
               stroke="currentColor"
               className="size-5 mt-1 transform"
-              animate={{ rotate: openSections.sort ? 90 : 0 }}
+              animate={{ rotate: openSections.PopularFilters ? 90 : 0 }}
               transition={{ duration: 0.3 }}
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -58,13 +36,15 @@ const Filter = () => {
           </div>
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: openSections.sort ? 1 : 0, height: openSections.sort ? "auto" : 0 }}
+            animate={{ opacity: openSections.PopularFilters ? 1 : 0, height: openSections.PopularFilters ? "auto" : 0 }}
             transition={{ duration: 0.3 }}
             className="overflow-hidden mt-3 space-y-1"
           >
-            {renderSortInput}
+            {/* {renderSortInput} */}
+            <RenderInput data={sortInput} />
           </motion.div>
         </div>
+
         <div>
           <div
             className="flex items-center space-x-2 cursor-pointer"
@@ -90,7 +70,99 @@ const Filter = () => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden mt-3 space-y-1"
           >
-            {renderDealsInput}
+            {/* {renderDealsInput} */}
+            <RenderInput data={dealsInput} />
+          </motion.div>
+        </div>
+
+        <div>
+          <div
+            className="flex items-center space-x-2 cursor-pointer"
+            onClick={() => toggleSection("StarCategory")}
+          >
+            <p className="text-lg font-semibold">StarCategory</p>
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-5 mt-1 transform"
+              animate={{ rotate: openSections.StarCategory ? 90 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </motion.svg>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: openSections.StarCategory ? 1 : 0, height: openSections.StarCategory ? "auto" : 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden mt-3 space-y-1"
+          >
+            {/* {StarCategory} */}
+            <RenderInput data={starCategory} />
+          </motion.div>
+        </div>
+
+        <div>
+          <div
+            className="flex items-center space-x-2 cursor-pointer"
+            onClick={() => toggleSection("GuestRatings")}
+          >
+            <p className="text-lg font-semibold">Guest Ratings</p>
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-5 mt-1 transform"
+              animate={{ rotate: openSections.GuestRatings ? 90 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </motion.svg>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: openSections.GuestRatings ? 1 : 0, height: openSections.GuestRatings ? "auto" : 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden mt-3 space-y-1"
+          >
+            {/* {GuestRatings} */}
+            <RenderInput data={guestRatings} />
+          </motion.div>
+        </div>
+
+
+        <div>
+          <div
+            className="flex items-center space-x-2 cursor-pointer"
+            onClick={() => toggleSection("PropertyType")}
+          >
+            <p className="text-lg font-semibold">Property Type</p>
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-5 mt-1 transform"
+              animate={{ rotate: openSections.PropertyType ? 90 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </motion.svg>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: openSections.PropertyType ? 1 : 0, height: openSections.PropertyType ? "auto" : 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden mt-3 space-y-1"
+          >
+            {/* {PropertyType} */}
+            <RenderInput data={propertyType} />
           </motion.div>
         </div>
       </div>

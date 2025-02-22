@@ -6,5 +6,6 @@ export interface IOfferSlider{
 }
 export interface ISortInput{
     id:string,
-    label:string
+    label:string,
+    name:string
 }
