@@ -7,7 +7,9 @@ const SelectRoomCard = () => {
           <div className="text-gray-500 line-through text-sm">₹19,300 <span className="text-green-600 font-semibold">15% off</span></div>
           <div className="text-gray-700 text-sm">No cost EMI from ₹6,782</div>
         </div>
-        <button className="bg-orange-500 text-white font-semibold py-3 px-10 rounded-lg">Select room</button>
+        <div className="flex h-full">  
+           <button className="bg-[#ff4f17] text-white font-semibold py-3 px-10 rounded-lg">Select room</button>
+        </div>
       </div>
     );
   };
