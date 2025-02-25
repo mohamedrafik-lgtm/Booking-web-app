@@ -1,5 +1,6 @@
 import CategoryRatings from "./CategoryRating";
 import Rating from "./RatingDetails";
+import ServiceRating from "./ServiceRating";
 
 const CleartripRatings = () =>{
     
@@ -8,8 +9,8 @@ const CleartripRatings = () =>{
             <div>
                 <h3 className="text-2xl font-semibold">Cleartrip ratings</h3>
             </div>
-            <div className="flex justify-between">
-                <div>
+            <div className="flex justify-between gap-5">
+                <div className="space-y-3">
                      <Rating/>
                      <div className="p-4 space-y-2">
                         <div className="flex items-center space-x-5">
@@ -39,8 +40,20 @@ const CleartripRatings = () =>{
                      </div>
                      <CategoryRatings/>
                 </div>
-                <div>
-                    service rating 
+                <div className="flex-[1] flex gap-5 p-2 rounded-md relative">
+                    <ServiceRating />
+                    <ServiceRating />
+                    <ServiceRating />
+                        <button className="absolute top-1/3 mt-11 -left-5 p-2 bg-white rounded-full shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+                        <button className="absolute top-1/3 mt-11 -right-5 p-2 bg-white rounded-full shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
                 </div>
             </div>
         </div>

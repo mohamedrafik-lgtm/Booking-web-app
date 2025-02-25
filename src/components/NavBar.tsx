@@ -1,10 +1,11 @@
 "use client"; 
 
 import Link from "next/link";
+import UserMenu from "./Menu";
 
 const Navbar = () => {
    
-    
+    const isLogged = true;
 
   return (
     <header className="bg-white shadow-sm">
@@ -25,9 +26,10 @@ const Navbar = () => {
             <h1 className="text-orange-500 text-2xl font-semibold ml-2">Cleartrip</h1>
           </div>
         </Link>
-        <div className="px-5 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 cursor-pointer transition duration-300">
+        {!isLogged ?  <div className="px-5 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 cursor-pointer transition duration-300">
           <Link href={"/user/login"}>Login</Link> / <Link href={"/user/register"}>Register</Link>
-        </div>
+        </div> : <UserMenu/>}
+       
       </nav>
     </header>
   );

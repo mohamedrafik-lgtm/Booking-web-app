@@ -11,14 +11,19 @@ const CategoryRatings = () => {
   ];
 
   return (
-    <div className="flex justify-between p-4">
-      {categories.map((category) => (
-        <div key={category.name} className="flex flex-col items-center">
-          <div className={`p-3 rounded-full ${category.color} text-`}>{category.icon}</div>
-          <span className="mt-2 text-sm font-medium text-gray-700">{category.name}</span>
-          <span className="text-lg font-bold">{category.rating}</span>
-        </div>
-      ))}
+    <div>
+      <div className="flex justify-between p-4">
+        {categories.map((category) => (
+          <div key={category.name} className="flex flex-col items-center">
+            <div className={`p-3 rounded-full ${category.color} text-`}>{category.icon}</div>
+            <span className="mt-2 text-sm font-medium text-gray-700">{category.name}</span>
+            <span className="text-lg font-bold">{category.rating}</span>
+          </div>
+        ))}
+      </div>
+      <div className="p-2 border-t border-dashed border-gray-200">
+        <p className="opacity-75">AI generated summary from recent guest reviews</p>
+      </div>
     </div>
   );
 };
