@@ -6,6 +6,7 @@ import PropertyRules from "@/components/hotelPageComponents/PropertyRules";
 import SelectRoomCard from "@/components/hotelPageComponents/SelectRoom";
 import img from "@/images/hotels slider img/df42e4b4_z (1).webp";
 import Comment from "@/components/hotelPageComponents/Comment";
+import Footer from "@/components/Footer";
 interface SearchHotelsProps {
     params: { hotelId: string }
 }
@@ -14,6 +15,7 @@ const HotelPage = ({ params }: SearchHotelsProps) => {
     console.log(params.hotelId);
 
     return (
+        <div>
         <div>
             <div className="w-8/12 mx-auto mt-14 p-4 border border-gray-200 rounded-2xl shadow-md bg-white space-y-16">
                 <div className="flex space-x-6">
@@ -59,6 +61,8 @@ const HotelPage = ({ params }: SearchHotelsProps) => {
                     </div>
                 </div>
             </div>
+        </div>
+        <Footer/>
         </div>
     );
 }

@@ -8,12 +8,14 @@ import { images, offers } from "@/data/data";
 import BankOffers from "@/components/hotels_Component/BankOffers";
 import PopularDestination from "@/components/hotels_Component/PopularDestination";
 import TopHotelsWithGreatDeals from "@/components/hotels_Component/TopHotelsWithGreatDeals";
+import Footer from "@/components/Footer";
 
 
 
 export default function Home() {
 
   return (
+    <div>
     <div className="max-w-7xl mx-auto flex pt-7 gap-6">
       {/*  side par */}
       <aside className="w-56">
@@ -49,6 +51,8 @@ export default function Home() {
           </div>
         </div>
       </main>
+    </div>
+    <Footer/>
     </div>
   );
 }
